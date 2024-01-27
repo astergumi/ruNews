@@ -1,12 +1,22 @@
-/*
-Убираем отступы для всего
-*/
-*{
+/*Подключение шрифта Tektur-Regular*/
+@font-face {
+    font-family: 'Tektur-Regular';
+    src: url(../fonts/Tektur-Regular.ttf);
+}
+
+/*Убираем отступы для всего сайта*/
+* {
     margin: 0;
     padding: 0;
 }
 
-header{
+/*Убираем нижнее подчеркивание для <a>*/
+a {
+    text-decoration: none;
+}
+
+/*Настраиваем шапку сайта*/
+header {
     height: 500px;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -14,11 +24,18 @@ header{
     justify-content: center;
 }
 
-.mainh1{
+/*Задаем стили для заголовка H1 в шапке сайте*/
+header h1 {
+    font-family: 'Tektur-Regular';
     font-size: 70px;
     color: rgb(235, 233, 112);
 }
+/*Решил добавить замену цвета при наведении на заголовок в шапке*/
+header h1:hover{
+    color: wheat;
+}
 
+/*Добавляем тематические изображения*/
 .mainpreview {
     position: absolute;
     top: 60px;
@@ -26,9 +43,37 @@ header{
     width: 500px;
 }
 
+/*Добавляем тематические изображения*/
 .secondpreview {
     position: absolute;
-    top: 450px;
+    top: 150px;
     left: 60px;
     width: 500px;
+}
+/*Стилизуем подвал сайта*/
+footer {
+    background-color: rgb(0, 0, 0);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+/*Нижний отступ для <div> с классом .footerlinks*/
+footer .footerlinks{
+    margin-bottom: 20px;
+}
+/*Стилизуем все <a> в футере с классом родителя .footerlinks*/
+footer .footerlinks > a{
+    font-family: 'Tektur-Regular';
+    color: rgb(235, 233, 112);
+    padding: 0px 10px;
+    font-size: 25px;
+}
+/*Смена цвета при наведении на <a> в footer*/
+footer a:hover{
+    color: wheat;
+}
+/*Стилизуем копирайт*/
+.copyright{
+    font-family: 'Tektur-Regular';
+    color: wheat;
 }
