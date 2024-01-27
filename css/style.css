@@ -1,1 +1,148 @@
-g
+/*Подключение шрифта Tektur-Regular*/
+@font-face {
+    font-family: 'Tektur-Regular';
+    src: url(../fonts/Tektur-Regular.ttf);
+}
+
+/*Убираем отступы для всего сайта*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Убираем нижнее подчеркивание для <a>*/
+a {
+    text-decoration: none;
+}
+
+/*Настраиваем шапку сайта*/
+header {
+    height: 500px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Задаем стили для заголовка H1 в шапке сайте*/
+header h1 {
+    font-family: 'Tektur-Regular';
+    font-size: 70px;
+    color: rgb(235, 233, 112);
+}
+
+/*Решил добавить замену цвета и размера при наведении на заголовок в шапке с задержкой 0.5с*/
+header h1:hover {
+    font-size: 75px;
+    transition: all 0.5s ease-out;
+    color: wheat;
+}
+
+/*Добавляем тематические изображения*/
+.mainpreview {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 500px;
+}
+
+/*Добавляем тематические изображения*/
+.secondpreview {
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    width: 500px;
+}
+
+/*Стилизуем блок под новости*/
+.news {
+    background-color: rgb(255, 255, 255);
+    padding: 50px 0px 30px;
+}
+
+/*Добавляем каждой второй статье цвет фона с прозрачностью 0.3*/
+article:nth-child(2n) {
+    background-color: rgba(228, 221, 139, 0.3);
+}
+
+/*Добавляем первым двум статьям new*/
+h2.new-article::before {
+    content: "NEW";
+    margin-right: 5px;
+    background-color: black;
+    color: yellow;
+}
+
+/*Стилизуем блок статьи*/
+article {
+    width: 768px;
+    margin: 0 auto 32px;
+    padding: 6px 15px;
+}
+
+/*Стилизуем <a> в статье*/
+article a {
+    color: rgb(128, 94, 30);
+}
+
+/*Добавляем замену цвета для <a> в статьях*/
+article a:hover {
+    color: wheat;
+}
+
+/*Добавляем стили для <h2> в статьях*/
+article h2 {
+    font-family: 'Tektur-Regular';
+    margin-bottom: 5px;
+}
+
+/*Добавляем стили для <p> в статьях*/
+article p {
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+/*Добавляем стили для <img> в статьях*/
+article img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/*Добавляем стили для класса ".article-public" в статьях*/
+.article-public {
+    text-align: right;
+    font-size: 15px;
+}
+
+/*Стилизуем подвал сайта*/
+footer {
+    background-color: rgb(0, 0, 0);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+/*Нижний отступ для <div> с классом .footerlinks*/
+footer .footerlinks {
+    margin-bottom: 20px;
+}
+
+/*Стилизуем все <a> в футере с классом родителя .footerlinks*/
+footer .footerlinks>a {
+    font-family: 'Tektur-Regular';
+    color: rgb(235, 233, 112);
+    padding: 0px 10px;
+    font-size: 25px;
+}
+
+/*Смена цвета при наведении на <a> в footer*/
+footer a:hover {
+    color: wheat;
+}
+
+/*Стилизуем копирайт*/
+.copyright {
+    font-family: 'Tektur-Regular';
+    color: wheat;
+}
