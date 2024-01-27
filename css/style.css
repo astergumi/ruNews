@@ -60,13 +60,20 @@ header h1:hover {
     padding: 50px 0px 30px;
 }
 
+.actual-news{
+    text-align: center;
+    font-family: 'Tektur-Regular';
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
 /*Добавляем каждой второй статье цвет фона с прозрачностью 0.3*/
-article:nth-child(2n) {
+.article-news:nth-child(2n+1) {
     background-color: rgba(228, 221, 139, 0.3);
 }
 
 /*Добавляем первым двум статьям new*/
-h2.new-article::before {
+.new-article::before {
     content: "NEW";
     margin-right: 5px;
     background-color: black;
